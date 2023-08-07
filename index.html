@@ -1,0 +1,74 @@
+<link
+  rel="stylesheet"
+  target="_blank"
+  href="https://odi-test.opensourcelearning.co.uk/https://unpkg.com/sakura.css/css/sakura.css"
+  type="text/css"
+/>
+
+<h1>Moodle Configuration</h1>
+
+<p>Select where you will be configring:</p>
+<select id="siteSelector">
+  <option value="https://odi-test.opensourcelearning.co.uk/">Test Site</option>
+  <option value="https://moodle.learndata.info/">Live Site</option>
+</select>
+
+<hr />
+
+<h4>Course Configuration</h4>
+<p>Enter the course code and click "Update URLs" to modify the links:</p>
+<input id="userInput" type="text" placeholder="Enter code here" />
+<button id="URL">Update URLs</button>
+
+<ul id="linkList">
+  <li>
+    <a
+      target="_blank"
+      href="https://odi-test.opensourcelearning.co.uk/backup/backup.php?id=[coursecode]"
+      >Backup</a
+    >
+  </li>
+  <li>
+    <a
+      target="_blank"
+      href="https://odi-test.opensourcelearning.co.uk/report/progress/index.php?course=[coursecode]"
+      >Test for completion</a
+    >
+  </li>
+  <li>
+    <a
+      target="_blank"
+      href="https://odi-test.opensourcelearning.co.uk/course/completion.php?id=[coursecode]"
+      >Set completion criteria</a
+    >
+  </li>
+</ul>
+
+<hr />
+
+<h4>Global Configuration</h4>
+<ul>
+  <li>
+    <a
+      target="_blank"
+      href="https://odi-test.opensourcelearning.co.uk/course/management.php"
+      >View all courses</a
+    >
+  </li>
+  <li>
+    <a
+      target="_blank"
+      href="https://odi-test.opensourcelearning.co.uk/admin/roles/define.php?action=add"
+      >Create a custom role</a
+    >
+  </li>
+  <li>
+    <a
+      target="_blank"
+      href="https://odi-test.opensourcelearning.co.uk/user/editadvanced.php?id=-1"
+      >Create a new user</a
+    >
+  </li>
+</ul>
+
+<!-- https://odi-test.opensourcelearning.co.uk/local/certification/editcertificationemail.php EMAIL CERTIFICTION -->
