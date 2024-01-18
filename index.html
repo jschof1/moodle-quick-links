@@ -1,74 +1,85 @@
-<link
-  rel="stylesheet"
-  target="_blank"
-  href="https://unpkg.com/sakura.css/css/sakura.css"
-  type="text/css"
-/>
+<!DOCTYPE html>
+<html lang="en">
 
-<h1>Moodle Configuration</h1>
+<head>
+  <meta charset="utf-8" />
+  <title>Moodle Quicklinks</title>
+  <meta name="description" content="Moodle Configuration" />
+  <meta name="author" content="Open Source Learning" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-<p>Select where you will be configring:</p>
-<select id="siteSelector">
-  <option value="https://odi-test.opensourcelearning.co.uk/">Test Site</option>
-  <option value="https://moodle.learndata.info/">Live Site</option>
-</select>
+<body>
 
-<hr />
+  <link rel="stylesheet" target="_blank" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css" />
 
-<h4>Course Configuration</h4>
-<p>Enter the course code and click "Update URLs" to modify the links:</p>
-<input id="userInput" type="text" placeholder="Enter code here" />
-<button id="URL">Update URLs</button>
+  <h1>Moodle Quicklinks</h1>
 
-<ul id="linkList">
-  <li>
-    <a
-      target="_blank"
-      href="https://odi-test.opensourcelearning.co.uk/backup/backup.php?id=[coursecode]"
-      >Backup</a
-    >
-  </li>
-  <li>
-    <a
-      target="_blank"
-      href="https://odi-test.opensourcelearning.co.uk/report/progress/index.php?course=[coursecode]"
-      >Test for completion</a
-    >
-  </li>
-  <li>
-    <a
-      target="_blank"
-      href="https://odi-test.opensourcelearning.co.uk/course/completion.php?id=[coursecode]"
-      >Set completion criteria</a
-    >
-  </li>
-</ul>
+  <p>Enter your links:</p>
+  <input id="testSite" type="text" placeholder="Test Site" />
+  <input id="testSiteName" type="text" placeholder="Enter name for link" />
 
-<hr />
+  <div>
+    <input id="liveSite" type="text" placeholder="Live Site" />
+    <input id="liveSiteName" type="text" placeholder="Enter name for link" />
+  </div>
+  <button id="submit">Apply links</button>
+  <hr />
+  <p>Select where you will be configring:</p>
+  <select id="siteSelector">
+    <option value="https://odi-test.opensourcelearning.co.uk">Test Site</option>
+    <option value="https://moodle.learndata.info">Live Site</option>
+  </select>
 
-<h4>Global Configuration</h4>
-<ul>
-  <li>
-    <a
-      target="_blank"
-      href="https://odi-test.opensourcelearning.co.uk/course/management.php"
-      >View all courses</a
-    >
-  </li>
-  <li>
-    <a
-      target="_blank"
-      href="https://odi-test.opensourcelearning.co.uk/admin/roles/define.php?action=add"
-      >Create a custom role</a
-    >
-  </li>
-  <li>
-    <a
-      target="_blank"
-      href="https://odi-test.opensourcelearning.co.uk/user/editadvanced.php?id=-1"
-      >Create a new user</a
-    >
-  </li>
-</ul>
+  <hr />
 
-<!-- https://odi-test.opensourcelearning.co.uk/local/certification/editcertificationemail.php EMAIL CERTIFICTION -->
+  <h4>Course Configuration</h4>
+  <p>Enter the course code and click "Update URLs" to modify the links:</p>
+  <input id="userInput" type="text" placeholder="Enter code here" />
+  <button id="URL">Update URLs</button>
+
+  <ul class="link-list" id="courseConfig">
+    <li>
+      <a target="_blank" href="/backup/backup.php?id=[coursecode]">Backup</a>
+    </li>
+    <li>
+      <a target="_blank" href="/report/progress/index.php?course=[coursecode]">Test for completion</a>
+    </li>
+    <li>
+      <a target="_blank" href="/course/completion.php?id=[coursecode]">Set completion criteria</a>
+    </li>
+  </ul>
+  <button class="addLinkButton" data-section="courseConfig">+ Add Useful Link</button>
+  <div id="courseConfigInputs" class="newLinkInputs" style="display: none;">
+
+  </div>
+
+  <hr />
+
+  <h4>Global Configuration</h4>
+  <ul class="link-list" id="globalConfig">
+    <li>
+      <a target="_blank" href="/course/management.php">View all courses</a>
+    </li>
+    <li>
+      <a target="_blank" href="/admin/roles/define.php?action=add">Create a custom role</a>
+    </li>
+    <li>
+      <a target="_blank" href="/user/editadvanced.php?id=-1">Create a new user</a>
+    </li>
+  </ul>
+  <button class="addLinkButton" data-section="globalConfig">+ Add Useful Link</button>
+  <div id="globalConfigInputs" class="newLinkInputs" style="display: none;">
+
+  </div>
+  <div>
+    <hr>
+    <div id="newLinkInputs" style="display: none;">
+    </div>
+  </div>
+
+  <button id="clearStorage">Clear Local Storage</button>
+  <script src="index.js"></script>
+
+</body>
