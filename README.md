@@ -13,10 +13,11 @@ Moodle Quick Links is a convenient tool designed to streamline the management an
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, Edge, etc.)
 - Access to your Moodle test and live sites.
+- 
 ### Link to Tool
-- [Moodle Quick Links](https://moodle-quick-links.netlify.app/)
-- [Moodle Quick Links (GitHub Pages)](https://moodle-quick-links.github.io/moodle-quick-links/)
+- [Moodle Quick Links](https://main--local-quick-links.netlify.app/)
 
+## Local install
 ### Installation
 1. Download the Moodle Quick Links tool from the provided source.
 2. Unzip the file if necessary.
